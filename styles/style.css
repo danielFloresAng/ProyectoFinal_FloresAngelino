@@ -1,0 +1,163 @@
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* root */
+:root {
+  --blanco: #FFF;
+  --oscuro: #212121;
+  --contraste: #b76115; 
+  --contrasteB: #F4F1BB;
+  --main: #9BC1BC;
+  --secundario: #5D576B;
+  --base: #e8e7e0;
+  --gris: #757575; 
+  --mons: 'Montserrat', sans-serif;
+  --nanum: 'Nanum Gothic', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%; 
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px; 
+  font-family: var(--mons);
+}
+header{
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--main);
+  margin-bottom: 2rem;
+  color: var(--secundario);
+}
+h1{
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+}
+#descripcion {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+.saldoDelUsuario {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  margin: 1rem;
+  font-weight: 400;
+  color: var(--secundario);
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+.tuSaldo {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.mensaje {
+  margin: .7rem 0 1.5rem 0;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-decoration: underline;
+  color: var(--gris);
+}
+#contenedorActualizar {
+  border: solid;
+  padding: 1.5rem;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  background-color: var(--secundario);
+  border-radius: 20px;
+  color: var(--base);
+
+}
+#contenedorActualizar p {
+  font-family: var(--nanum);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+#actualizarSaldo {
+  height: 2rem;
+  width: 7rem;
+}
+#botonActualizarSaldo {
+  padding: .7rem;
+  background-color: var(--base);
+  border-radius: 5px;
+  color: var(--secundario);
+  border: var(--oscuro);
+  font-family: var(--nanum);
+  margin: 1rem auto;
+  transition: .3s;
+  
+}
+#botonActualizarSaldo:hover {
+  background-color: var(--contrasteB);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+#seccionInervsiones {
+  box-shadow: 0 0 .5rem 0;
+  margin: 2rem 1rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-color: var(--main);
+}
+
+.contenedorInversiones {
+  border: solid .5px var(--gris);
+  border-radius: 5px;
+  padding: 2rem;
+  color: var(--secundario);
+  background-color: var(--base);
+}
+.contenedorInversiones  h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.contenedorInversiones label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.contenedorInversiones input {
+  height: 2rem;
+}
+#contenedorHistorialDepositos {
+  margin: 2rem ;
+  font-weight: 300;
+}
+#botonOcultarHistorial {
+  display: none;
+}
+#preguntaHistorial {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+#contenedorMostrarHistorialDepositos {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+#contenedorHistorialDepositos button{
+  margin-bottom: 1rem;
+  padding: .5rem;
+  font-family: var(--nanum);
+  border-radius: 8px;
+  border: solid .5px var(--oscuro);
+  cursor: pointer;
+  transition: .2s;
+  background-color: var(--secundario);
+  color: var(--base);
+}
+#contenedorHistorialDepositos button:hover {
+  background-color: var(--base);
+  color: var(--secundario);
+  font-weight: 550;
+}

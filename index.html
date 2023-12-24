@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+<!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Termina SweetAlert2 -->
+    <title>ProyectoFinal_FloresAngelino</title>
+  </head>
+  <body>
+    <header>
+      <h1>Simulador - Cuenta de inversiones</h1>
+      <p id="descripcion">Inversiones con 10%, 12% y 15% de rendimiento anual</p>
+    </header>  
+
+
+    <!-- Saldo actual del usuario -->
+    <section class="saldoDelUsuario">
+      <h2>Bienvenido</h2>
+      <p class="tuSaldo">Tu saldo actual es: $<span id="saldoActual">0</span></p>
+      <div id="saldoActualizado"></div>
+      <!-- <div id="saldoActual"></div> -->
+      <p class="mensaje">*Saldo a la vista con rendimiento de 7% anual.</p>
+    </section>
+
+<!-- Sección para hacer depósitos y actualizar saldo -->
+    <section id="contenedorActualizar">      
+      <p>¿Deseas actualizar tu saldo?</p>
+      <label for="actualizarSaldo">Ingresa la cantidad deseada: </label>
+      <input type="number" id="actualizarSaldo" placeholder="$"><br>
+      <button id="botonActualizarSaldo">Actualizar saldo</button>
+    </section>
+
+<!-- Contenedor para mostrar depósitos -->
+    <div id="contenedorHistorialDepositos">
+      <p id="preguntaHistorial">¿Deseas consultar tu historial de depósitos?</p>
+      <button id="botonConsultarDepositos">Mostrar historial</button>
+      <div id="contenedorMostrarHistorialDepositos"></div>
+      <button id="botonOcultarHistorial">Ocultar historial</button>
+    </div>
+
+<!-- Consultar divisas -->
+    <div id="contenedorDivisas">
+      <p id="divisas">Conversión de pesos mexicanos a otras divisas</p>
+
+      <label id="cantidadDivisas" for="cantidadPesos">Ingresa la cantidad de pesos mexicanos (MXN)</label>
+      <input type="number" id="cantidadPesos">
+
+      <label for="divisasSelect">Seleciona la divisa</label>
+      <select name="divisasSelect" id="divisasSelect">
+
+        <option value="USD"> USD (Dolar americano)</option>
+        <option value="EUR"> EUR (Euro)</option>
+      </select>
+      <button id="botonDivisas">Realizar conversión</button>
+
+      <p id="conversionRealizada"></p>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
