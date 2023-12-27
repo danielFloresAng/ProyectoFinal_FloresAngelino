@@ -8,7 +8,7 @@
   --oscuro: #212121;
   --contraste: #b76115; 
   --contrasteB: #F4F1BB;
-  --main: #9BC1BC;
+  --main: rgb(79, 144, 209);
   --secundario: #5D576B;
   --base: #e8e7e0;
   --gris: #757575; 
@@ -134,7 +134,7 @@ h2 {
   margin: 2rem ;
   font-weight: 300;
 }
-#botonOcultarHistorial {
+.displayNone {
   display: none;
 }
 #preguntaHistorial {
@@ -160,4 +160,25 @@ h2 {
   background-color: var(--base);
   color: var(--secundario);
   font-weight: 550;
+}
+
+/* Sección para hacer depósitos y actualizar saldo */
+
+#contenedorDivisas {
+  border: solid;
+  padding: 1.5rem;
+  margin: 2rem 10%;
+
+}
+#divisas {
+  font-style: var(--nanum);
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.divisasLabel{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 3rem;
 }
