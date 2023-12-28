@@ -8,9 +8,9 @@
   --oscuro: #212121;
   --contraste: #b76115; 
   --contrasteB: #F4F1BB;
-  --main: rgb(79, 144, 209);
+  --main: rgb(65, 131, 139);
   --secundario: #5D576B;
-  --base: #e8e7e0;
+  --base: #e4e8e0;
   --gris: #757575; 
   --mons: 'Montserrat', sans-serif;
   --nanum: 'Nanum Gothic', sans-serif;
@@ -32,13 +32,17 @@ header{
   padding: 3rem;
   background-color: var(--main);
   margin-bottom: 2rem;
-  color: var(--secundario);
+  color: var(--base);
+}
+button {
+  cursor: pointer;
 }
 h1{
   font-weight: 500;
   margin-bottom: 1rem;
   font-size: 3.5rem;
 }
+
 #descripcion {
   font-style: italic;
   font-size: 1.4rem;
@@ -65,6 +69,8 @@ h2 {
   text-decoration: underline;
   color: var(--gris);
 }
+
+/* Sección para hacer depósitos y actualizar saldo */
 #contenedorActualizar {
   border: solid;
   padding: 1.5rem;
@@ -99,16 +105,81 @@ h2 {
 #botonActualizarSaldo:hover {
   background-color: var(--contrasteB);
   font-size: 1.4rem;
-  cursor: pointer;
 }
+.linea {
+  margin: 0 2.5rem;
+  border: solid var(--secundario) 1px;
+}
+
+/* Conversión de moneda */
+#contenedorDivisas {
+  border: solid 4px var(--secundario);
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 50rem;
+}
+#divisas {
+  font-weight: 500;
+  color: var(--secundario);
+  font-style: var(--nanum);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.divisasLabel{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+#contenedorDivisas hr {
+  margin-bottom: 2rem;
+  color: var(--secundario);
+} 
+
+#contenedorDivisas input, #contenedorDivisas select{
+  margin-bottom: 1rem;
+  height: 2rem;
+}
+#botonDivisas {
+  padding: .6rem;
+  background-color: var(--main);
+  border-radius: 3px;
+  color: var(--base);
+  font-weight: 500;
+  border: solid 1px var(--secundario);
+  transition: .3s;
+  
+  margin: 2rem 40%;
+}
+#contenedorDivisas button:hover {
+  padding: .7rem;
+  color: var(--secundario);
+  background-color: var(--base);
+}
+
+
+/* Sección principal - realizar inversiones  */
+
 #seccionInervsiones {
   box-shadow: 0 0 .5rem 0;
-  margin: 2rem 1rem;
-  padding: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
+  margin: 2rem 2rem;
+  padding: 1rem 2.4rem;
   background-color: var(--main);
+}
+#seccionInervsiones h2 {
+  color: var(--base);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: unset;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.contenedorPadreInversiones {
+  display: flex;
+  flex-direction: row;
+  gap: .8rem;
 }
 
 .contenedorInversiones {
@@ -134,6 +205,9 @@ h2 {
   margin: 2rem ;
   font-weight: 300;
 }
+.historialesAnuales {
+  font-size: 1.3rem;
+}
 .displayNone {
   display: none;
 }
@@ -151,7 +225,6 @@ h2 {
   font-family: var(--nanum);
   border-radius: 8px;
   border: solid .5px var(--oscuro);
-  cursor: pointer;
   transition: .2s;
   background-color: var(--secundario);
   color: var(--base);
@@ -161,24 +234,87 @@ h2 {
   color: var(--secundario);
   font-weight: 550;
 }
-
-/* Sección para hacer depósitos y actualizar saldo */
-
-#contenedorDivisas {
-  border: solid;
-  padding: 1.5rem;
-  margin: 2rem 10%;
-
-}
-#divisas {
-  font-style: var(--nanum);
-  font-weight: 300;
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.divisasLabel{
-  font-size: 1.4rem;
+.aceptarInversion {
+  margin-top: 1.2rem;
+  margin-bottom: .8rem;
+  width: 8rem;
+  padding: .5rem;
+  font-family: var(--nanum);
+  border-radius: 6px;
+  border: solid 1px var(--secundario);
+  transition: .2s;
+  background-color: var(--secundario);
+  color: var(--base);
   font-weight: 600;
-  margin: 3rem;
+}
+.aceptarInversion:hover {
+  font-size: 1.4rem;
+  background-color: var(--gris);
+  padding: .6rem;
+}
+.mostrarOcultarInversiones {
+  margin-top: 1.2rem;
+  margin-bottom: .3rem;
+  padding: .3rem;
+  font-family: var(--mons);
+  border-radius: 3px;
+  border: solid px var(--secundario);
+  transition: .2s;
+  background-color: var(--gris);
+  color: var(--base);
+  font-weight: 500;
+}
+.mostrarOcultarInversiones:hover {
+  padding: .5rem;
+}
+
+/* MediaQueries */
+@media (max-width: 300px) {
+  h1{
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  #descripcion {
+    font-size: 1.3rem;
+  }
+  .tuSaldo {
+    font-size: 1.6rem;
+  }
+  .mensaje {
+    font-size: 1.3rem;
+  }
+  #contenedorHistorialDepositos p{
+    font-size: 1.5rem;
+  }
+  #contenedorMostrarHistorialDepositos {
+    font-size: 1.3rem;
+  }
+  #contenedorHistorialDepositos button {
+    margin: 1rem auto .5rem auto;
+  }
+}
+@media (min-width: 301px) {
+  .historialesAnuales {
+    font-size: 1.5rem;
+  }
+  #divisas {
+    font-size:1.8rem;
+  }
+  .divisasLabel {
+    font-size:1.4rem;
+  }
+  #seccionInervsiones h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 660px) {
+  .contenedorPadreInversiones {
+    flex-direction: column;
+
+  }
 }

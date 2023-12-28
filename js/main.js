@@ -84,7 +84,7 @@ botonDivisas.addEventListener("click", () => {
     fetch(urlApi) 
     .then((resp) => resp.json())
     .then(data => {
-      conversionRealizada.textContent = `$${cantidad} MXN = $${data.rates[divisa]} ${divisa}`
+      conversionRealizada.innerHTML = `$${cantidad} <b>MXN =</b> $${data.rates[divisa]} <b>${divisa}</b>`
     })
     .catch((error) => {
       console.error("Data error", error)
@@ -141,7 +141,7 @@ boton10Anual.addEventListener("click", ()=> {
 
     historialDepositos.push(historial) // Agregando retiros al historial de depósitos principal
 
-    containerInversion10anual.innerHTML += `<br> Inversión: $${historial10Anual.Cantidad} MXN <br> Fecha inicial: ${historial10Anual.Fecha} <br> Total al final del plazo: $${cantidadMasRendimiento} MXN <br>`
+    containerInversion10anual.innerHTML += `<br> <b>Inversión:</b>  $${historial10Anual.Cantidad} MXN <br> <b>Fecha inicial:</b> ${historial10Anual.Fecha} <br> <b>Total al final del plazo:</b> $${cantidadMasRendimiento} MXN <br>`
 
   } else if (saldoUser < cantidad10anual) {
     Swal.fire({
@@ -195,7 +195,7 @@ boton12Anual.addEventListener("click", ()=> {
   let cantidadMasRendimiento = historial12Anual.Cantidad + (historial12Anual.Cantidad * ((0.12 / 365) * 180)) // Cálculo para obtener el total de inversión más rendimiento al finalizar el plazo
 
 
-  if (!isNaN(cantidad12anual) &&  saldoUser >= cantidad12anual) {
+  if (!isNaN(cantidad12anual) && saldoUser >= cantidad12anual) {
     saldoUser -= cantidad12anual
     sessionStorage.setItem("Saldo actual", saldoUser)
 
@@ -212,7 +212,7 @@ boton12Anual.addEventListener("click", ()=> {
 
     historialDepositos.push(historial) // Agregando retiros al historial de depósitos principal
 
-    containerInversion12anual.innerHTML += `<br> Inversión: $${historial12Anual.Cantidad} MXN <br> Fecha inicial: ${historial12Anual.Fecha} <br> Total al final del plazo: $${cantidadMasRendimiento} MXN <br>`
+    containerInversion12anual.innerHTML += `<br> <b>Inversión:</b> $${historial12Anual.Cantidad} MXN <br> <b>Fecha inicial:</b> ${historial12Anual.Fecha} <br> <b>Total al final del plazo:</b> $${cantidadMasRendimiento} MXN <br>`
 
   } else if (saldoUser < cantidad12anual) {
     Swal.fire({
@@ -283,7 +283,7 @@ boton15Anual.addEventListener("click", ()=> {
 
     historialDepositos.push(historial) // Agregando retiros al historial de depósitos principal
 
-    containerInversion15anual.innerHTML += `<br> Inversión: $${historial15Anual.Cantidad} MXN <br> Fecha inicial: ${historial15Anual.Fecha} <br> Total al final del plazo: $${cantidadMasRendimiento} MXN <br>`
+    containerInversion15anual.innerHTML += `<br> <b>Inversión:</b> $${historial15Anual.Cantidad} MXN <br> Fecha inicial: ${historial15Anual.Fecha} <br> Total al final del plazo: $${cantidadMasRendimiento} MXN <br>`
 
   } else if (saldoUser < cantidad15anual) {
     Swal.fire({

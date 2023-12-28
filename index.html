@@ -38,11 +38,12 @@
       <div id="contenedorMostrarHistorialDepositos"></div>
       <button id="botonOcultarHistorial" class="displayNone">Ocultar historial</button>
     </div>
+    <div class="linea"></div>
 
 <!-- Consultar divisas -->
     <div id="contenedorDivisas">
-      <p id="divisas">Conversión de pesos mexicanos a otras divisas</p>
-
+      <p id="divisas">Conversión de pesos mexicanos a otras monedas</p>
+      <hr>
       <label  for="cantidadPesos" class="divisasLabel">Ingresa la cantidad de pesos mexicanos (MXN): </label>
       <input type="number" id="cantidadPesos">
       <br>
@@ -57,60 +58,62 @@
 
       <p id="conversionRealizada"></p>
     </div>
-
+    
 <!-- Sección principal - realizar inversiones -->
 <main id="seccionInervsiones">
-  
+  <h2>Invertir saldo disponible</h2>
   <!-- Inversón 10 por ciento anual -->
-  <div class="contenedorInversiones">
-    <h3>Inversion a 3 meses <b>10%</b> de rendimiento anual</h3>
-    
-    <label for="inversion10">Cantidad a invertir: </label>
-    <input type="number" id="inversion10" placeholder="Ingresa una cantidad para invertir">
+  <div class="contenedorPadreInversiones">
+    <div class="contenedorInversiones">
+      <h3>Inversion a 3 meses <b>10%</b> de rendimiento anual</h3>
+      
+      <label for="inversion10">Cantidad a invertir: </label>
+      <input type="number" id="inversion10" placeholder="Ingresa una cantidad para invertir">
+      <br>
+      <button id="invertir10" class="aceptarInversion">Aceptar</button>
+      <p id="total10anual"><b>Total invertido:</b> $ <span id="total10anualSpan">0</span> MXN</p>
+      <button id="mostrarHistorial10" class="mostrarOcultarInversiones">Mostrar historial</button>
 
-    <button id="invertir10">Aceptar</button>
-    <p id="total10anual">Total invertido: $ <span id="total10anualSpan">0</span> MXN</p>
-    <button id="mostrarHistorial10">Mostrar historial</button>
+      <div id="historialContainer10" class="displayNone">
+        <div id="inversion10anual" class="historialesAnuales"></div>
+        <button id="ocultarHistorial10" class="mostrarOcultarInversiones">Ocultar historial</button>
+      </div>
 
-    <div id="historialContainer10" class="displayNone">
-      <div id="inversion10anual" ></div>
-      <button id="ocultarHistorial10">Ocultar historial</button>
     </div>
-
-  </div>
-  
-  <!-- Inversón 12 por ciento anual -->
-  <div class="contenedorInversiones">
-    <h3>Inversion a 6 meses: <b>12%</b> de rendimiento anual</h3>
     
-      <label for="inversion12">Cantidad a invertir: </label>
-      <input type="number" id="inversion12" placeholder="Ingresa una cantidad para invertir">
+    <!-- Inversón 12 por ciento anual -->
+    <div class="contenedorInversiones">
+      <h3>Inversion a 6 meses: <b>12%</b> de rendimiento anual</h3>
+      
+        <label for="inversion12">Cantidad a invertir: </label>
+        <input type="number" id="inversion12" placeholder="Ingresa una cantidad para invertir">
+        <br>
+        <button id="invertir12" class="aceptarInversion">Aceptar</button>
+        <p id="total12anual"><b>Total invertido:</b> $ <span id="total12anualSpan">0</span> MXN</p>
+        <button id="mostrarHistorial12" class="mostrarOcultarInversiones">Mostrar historial</button>
     
-      <button id="invertir12">Aceptar</button>
-      <p id="total12anual">Total invertido: $ <span id="total12anualSpan">0</span> MXN</p>
-      <button id="mostrarHistorial12">Mostrar historial</button>
-  
-      <div id="historialContainer12" class="displayNone">
-        <div id="inversion12anual" ></div>
-        <button id="ocultarHistorial12">Ocultar historial</button>
-      </div>
-  </div>
-  
-  <!-- Inversón 15 por ciento anual -->
-  <div class="contenedorInversiones">
-    <h3>Inversion a 12 meses: <b>15%</b> de rendimiento anual</h3>
+        <div id="historialContainer12" class="displayNone">
+          <div id="inversion12anual" class="historialesAnuales"></div>
+          <button id="ocultarHistorial12" class="mostrarOcultarInversiones">Ocultar historial</button>
+        </div>
+    </div>
     
-      <label for="inversion15">Cantidad a invertir: </label>
-      <input type="number" id="inversion15" placeholder="Ingresa una cantidad para invertir">
+    <!-- Inversón 15 por ciento anual -->
+    <div class="contenedorInversiones">
+      <h3>Inversion a 12 meses: <b>15%</b> de rendimiento anual</h3>
+      
+        <label for="inversion15">Cantidad a invertir: </label>
+        <input type="number" id="inversion15" placeholder="Ingresa una cantidad para invertir">
+        <br>
+        <button id="invertir15" class="aceptarInversion">Aceptar</button>
+        <p id="total15anual"><b>Total invertido:</b> $ <span id="total15anualSpan">0</span> MXN</p>
+        <button id="mostrarHistorial15" class="mostrarOcultarInversiones">Mostrar historial</button>
     
-      <button id="invertir15">Aceptar</button>
-      <p id="total15anual">Total invertido: $ <span id="total15anualSpan">0</span> MXN</p>
-      <button id="mostrarHistorial15">Mostrar historial</button>
-  
-      <div id="historialContainer15" class="displayNone">
-        <div id="inversion15anual" ></div>
-        <button id="ocultarHistorial15">Ocultar historial</button>
-      </div>
+        <div id="historialContainer15" class="displayNone">
+          <div id="inversion15anual" class="historialesAnuales" ></div>
+          <button id="ocultarHistorial15" class="mostrarOcultarInversiones">Ocultar historial</button>
+        </div>
+    </div>
   </div>
 
 </main>
